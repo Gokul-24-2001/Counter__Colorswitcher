@@ -1,0 +1,245 @@
+
+/* ------------------------
+   Base Layout (Desktop)
+------------------------- */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    /* border: 2px solid red;       fixed "soild" typo */
+    background-color: rgb(228, 233, 231);
+    box-sizing: border-box;
+    height: 100%;               /* responsive height */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 170px;
+    height: 100%;
+    margin: 5px;
+    border-radius: .23rem;
+}
+
+.todo1 {
+    padding-top: 40px;
+    margin-left: 10px;
+}
+
+.todo {
+    padding: 10px;
+    font-size: 16px;
+}
+
+span {
+    padding: 0 8px;
+}
+
+/* ------------------------
+   Main Content
+------------------------- */
+#todos {
+    background-color: rgb(251, 255, 255);
+    height: auto;
+    width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input input {
+    height: 25px;
+    width: 350px;
+    border: none;
+    outline: none;
+    background-color: rgb(236, 205, 205);
+}
+
+.input button {
+    border: none;
+    outline: none;
+    width: 45px;
+    background-color: rgb(207, 207, 141);
+    border-radius: .23rem;
+}
+
+.list button {
+    background-color: rgb(255, 144, 144);
+    width: 55px;
+    border-radius: .23rem;
+    border: none;
+    margin-left: 100px;
+}
+
+/* ------------------------
+   Color Switcher
+------------------------- */
+.color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.color_btn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* ------------------------
+   Increment / Decrement
+------------------------- */
+.increment {
+    background-color: rgb(248, 250, 251);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    border-radius: .32rem;
+    color: blue;
+}
+
+.i-d-r-btn {
+    display: flex;
+    gap: 15px;
+}
+
+.increment-btn {
+    background-color: rgb(207, 211, 255);
+    border-radius: .23rem;
+    padding: 10px 15px;
+    opacity: .8;
+    border: none;
+}
+
+/* ------------------------
+   Text Reverse
+------------------------- */
+.reverse {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
+
+.rev_btn {
+    border-radius: .32rem;
+    background-color: rgb(165, 202, 222);
+    padding: 6px 80px;
+    font-size: 17px;
+    border-color: blue;
+}
+
+.reverse input {
+    padding: 18px;
+}
+
+.del {
+    padding: 0 20px;
+    height: 27px;
+    margin-top: 18px;
+    background-color: rgb(242, 158, 162);
+    border-radius: .32rem;
+    border: none;
+}
+
+/* =====================================
+   📱 Responsive Design – Mobile & Tablet
+===================================== */
+
+/* Tablet (≤ 992px) */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    #todos {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .input input {
+        width: 250px;
+    }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    #todos {
+        width: 95%;
+        margin-top:30px ;
+    }
+
+    .input {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input input {
+        width: 40%;
+        /* margin-left: 100px; */
+    }
+
+    .color_btn {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+        .input input {
+        width: 70%;
+    }
+
+    .rev_btn {
+        padding: 6px 30px;
+        font-size: 14px;
+    }
+
+    .increment {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #todos {
+        margin: 10px;
+     margin-top:25px ;
+
+        width: 80%;
+    }
+
+    .list button {
+        margin-left: 0;
+        width: 20%;
+    }
+}
