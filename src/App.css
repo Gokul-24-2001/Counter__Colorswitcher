@@ -1,7 +1,7 @@
 
-/* ------------------------
-   Base Layout (Desktop)
-------------------------- */
+html{
+    scroll-behavior: smooth;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -40,7 +40,7 @@ span {
 /* ------------------------
    Main Content
 ------------------------- */
-#todos {
+.todos {
     background-color: rgb(251, 255, 255);
     height: auto;
     width: 600px;

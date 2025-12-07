@@ -5,18 +5,18 @@ import Counter from './Counter'
 import Textreverse from './Textreverse'
 function MainContent() {
   return (
-    <div className=''>
-        <section id="todos">
+    <div>
+        <section className="todos" id="todos">
         <Todos/>
         </section>
-           <section id="todos">
+           <section className="todos" id="colorswitcher">
            <ColorSwitcher/>
         </section>
-           <section id="todos">
+           <section className="todos" id="counter">
         <Counter/>
         </section>
       
-           <section id="todos">
+           <section className="todos" id="textreverse">
       <Textreverse />
         </section>
     </div>
