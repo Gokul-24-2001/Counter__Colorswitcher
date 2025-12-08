@@ -8,7 +8,7 @@ function Sidebar() {
       <div className='todo1'><a href="#todos" style={{textDecoration:"none",color:"black"}}><FcTodoList/><span>ToDo</span></a></div>
       <div className='todo'><a href="#counter" style={{textDecoration:"none"}}><CiCalculator2/><span>Counter</span></a></div>
        <div className='todo'><a href="#colorswitcher" style={{textDecoration:"none"}}><IoColorFilter/><span>Color switcher</span></a></div>
-        <div className='todo'><a href="#textreverse" style={{textDecoration:"none"}}><FcTodoList/><span>ToDo</span></a></div>
+        <div className='todo'><a href="#textreverse" style={{textDecoration:"none"}}><FcTodoList/><span>Reversetext</span></a></div>
     </div>
   )
 }
