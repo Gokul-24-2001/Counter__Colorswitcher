@@ -4,25 +4,22 @@ import axios from 'axios'
 function Counter() {
   const[increment,setIncrement]=useState(0);
   const[ans,setAns]=useState(4);
-  
-    useEffect(()=>{
+useEffect(()=>{
   // setIncrement((prev)=>prev+1)
 setAns((p)=>p*2);
     },[])
     const handleIncre=()=>{
       setIncrement((prev)=>prev+1)
     }
-    const handledecre=()=>{
-      
-            setIncrement((prev)=>prev-1)
-
+  const handledecre=()=>{
+  setIncrement((prev)=>prev-1)
+  }
+  const reset=()=>{
+  setIncrement(0);
     }
-    const reset=()=>{
-      setIncrement(0);
-    }
-    console.log(increment)
+    console.log("increment",increment);
   return (
-    <div className="increment">
+     <div className="increment">
       <div><h1>{increment} ..</h1></div>
        <div className='i-d-r-btn'>
         <button type='button' className="increment-btn"onClick={()=>handleIncre()}>Increment</button>
